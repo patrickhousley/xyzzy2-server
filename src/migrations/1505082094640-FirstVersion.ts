@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-export class BaseCardSets1505078346504 implements MigrationInterface {
+export class FirstVersion1505078346504 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {

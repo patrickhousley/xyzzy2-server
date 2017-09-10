@@ -13,7 +13,8 @@ export class CardSet {
 
   @Column({
     type: 'boolean',
-    default: false
+    default: false,
+    nullable: false
   })
   public active: boolean;
 
@@ -26,7 +27,8 @@ export class CardSet {
 
   @Column({
     type: 'boolean',
-    default: false
+    default: false,
+    nullable: false
   })
   public baseDeck: boolean;
 
@@ -39,7 +41,8 @@ export class CardSet {
 
   @Column({
     type: 'int',
-    default: 0
+    default: 0,
+    nullable: false
   })
   public weight: number;
 

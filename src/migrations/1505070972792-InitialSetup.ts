@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, TableSchema, ColumnSchema } from "typeorm";
+import { MigrationInterface, QueryRunner, TableSchema, ColumnSchema, ForeignKeySchema } from 'typeorm';
 
 export class InitialSetup1505070972792 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
@@ -122,11 +122,31 @@ export class InitialSetup1505070972792 implements MigrationInterface {
         })
       ]
     ));
+
+    await queryRunner.createForeignKey(
+      'black_card',
+      new ForeignKeySchema(
+        'fk_card_set_black_card',
+        ['cardSetId'],
+        ['id'],
+        'card_set'
+      )
+    );
+
+    await queryRunner.createForeignKey(
+      'white_card',
+      new ForeignKeySchema(
+        'fk_card_set_white_card',
+        ['cardSetId'],
+        ['id'],
+        'card_set'
+      )
+    );
   }
 
   public async down(queryRunner: QueryRunner): Promise<any> {
-    queryRunner.dropTable('black_card');
-    queryRunner.dropTable('white_card');
-    queryRunner.dropTable('card_set');
+    await queryRunner.dropTable('black_card');
+    await queryRunner.dropTable('white_card');
+    await queryRunner.dropTable('card_set');
   }
 }

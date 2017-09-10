@@ -36,7 +36,6 @@ if (process.env.DATABASE_URL) {
 
 (async () => {
   let connection = await createConnection(connectionOptions);
-  await connection.undoLastMigration();
   await connection.runMigrations();
   await connection.close();
 })().catch(error => console.error(error));

@@ -12,19 +12,22 @@ export class BlackCard {
 
   @Column({
     type: 'varchar',
-    length: '255'
+    length: '255',
+    nullable: false
   })
   public text: string;
 
   @Column({
     type: 'int',
-    default: 0
+    default: 0,
+    nullable: false
   })
   public draw: number;
 
   @Column({
     type: 'int',
-    default: 1
+    default: 1,
+    nullable: false
   })
   public pick: number;
 

@@ -12,7 +12,8 @@ export class WhiteCard {
 
   @Column({
     type: 'varchar',
-    length: '255'
+    length: '255',
+    nullable: false
   })
   public text: string;
 
