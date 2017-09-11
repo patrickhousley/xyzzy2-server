@@ -1,0 +1,1 @@
+select * from card_set order by card_set.weight asc
