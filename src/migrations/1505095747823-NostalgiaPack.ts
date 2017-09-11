@@ -6,7 +6,7 @@ export class NostalgiaPack1505095747823 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `90s Nostalgia Pack`,
-      baseDeck: true,
+      baseDeck: false,
       description: null,
       weight: 19,
       active: true
@@ -318,7 +318,7 @@ export class NostalgiaPack1505095747823 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `90s Nostalgia Pack`,
-      baseDeck: true,
+      baseDeck: false,
       description: null,
       weight: 19,
       active: true

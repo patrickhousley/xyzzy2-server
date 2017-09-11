@@ -6,7 +6,7 @@ export class BoxExpansion1505095406073 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `Box Expansion`,
-      baseDeck: true,
+      baseDeck: false,
       description: `The Expansion Box Box Expansion.`,
       weight: 18,
       active: true
@@ -222,7 +222,7 @@ export class BoxExpansion1505095406073 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `Box Expansion`,
-      baseDeck: true,
+      baseDeck: false,
       description: `The Expansion Box Box Expansion.`,
       weight: 18,
       active: true

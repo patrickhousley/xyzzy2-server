@@ -6,7 +6,7 @@ export class MisprintReplacement1505096554899 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `Misprint Replacement Bonus Cards`,
-      baseDeck: true,
+      baseDeck: false,
       description: `Bonus cards included with replacements for misprinted cards.`,
       weight: 21,
       active: true
@@ -114,7 +114,7 @@ export class MisprintReplacement1505096554899 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `Misprint Replacement Bonus Cards`,
-      baseDeck: true,
+      baseDeck: false,
       description: `Bonus cards included with replacements for misprinted cards.`,
       weight: 21,
       active: true

@@ -6,7 +6,7 @@ export class Holiday20131505097121798 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `2013 Holiday Bullshit`,
-      baseDeck: true,
+      baseDeck: false,
       description: `http://www.holidaybullshit.com/`,
       weight: 23,
       active: true
@@ -326,7 +326,7 @@ export class Holiday20131505097121798 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `2013 Holiday Bullshit`,
-      baseDeck: true,
+      baseDeck: false,
       description: `http://www.holidaybullshit.com/`,
       weight: 23,
       active: true

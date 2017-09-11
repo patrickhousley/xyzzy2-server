@@ -6,7 +6,7 @@ export class PAXEast2013C1505097543624 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `PAX East 2013 Pack &quot;C&quot;`,
-      baseDeck: true,
+      baseDeck: false,
       description: `PAX East 2013 Pack &quot;C&quot;.`,
       weight: 32,
       active: true
@@ -118,7 +118,7 @@ export class PAXEast2013C1505097543624 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `PAX East 2013 Pack &quot;C&quot;`,
-      baseDeck: true,
+      baseDeck: false,
       description: `PAX East 2013 Pack &quot;C&quot;.`,
       weight: 32,
       active: true

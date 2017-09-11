@@ -6,7 +6,7 @@ export class SecondExpansion1505084189063 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `The Second Expansion`,
-      baseDeck: true,
+      baseDeck: false,
       description: `The official Second Expansion.`,
       weight: 11,
       active: true
@@ -1020,7 +1020,7 @@ export class SecondExpansion1505084189063 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `The Second Expansion`,
-      baseDeck: true,
+      baseDeck: false,
       description: `The official Second Expansion.`,
       weight: 11,
       active: true

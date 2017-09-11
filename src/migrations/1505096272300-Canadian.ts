@@ -6,7 +6,7 @@ export class Canadian1505096272300 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
     const insertResult = await queryRunner.insert('card_set', {
       name: `Canadian`,
-      baseDeck: true,
+      baseDeck: false,
       description: `Cards included in Canadian orders.`,
       weight: 20,
       active: true
@@ -274,7 +274,7 @@ export class Canadian1505096272300 implements MigrationInterface {
 
     await queryRunner.delete('card_set', {
       name: `Canadian`,
-      baseDeck: true,
+      baseDeck: false,
       description: `Cards included in Canadian orders.`,
       weight: 20,
       active: true
