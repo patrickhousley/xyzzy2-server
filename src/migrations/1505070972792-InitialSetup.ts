@@ -1,10 +1,17 @@
-import { MigrationInterface, QueryRunner, TableSchema, ColumnSchema, ForeignKeySchema } from 'typeorm';
+/* tslint:disable:no-non-null-assertion no-unsafe-any no-any */
+
+import {
+  ColumnSchema,
+  ForeignKeySchema,
+  MigrationInterface,
+  QueryRunner,
+  TableSchema
+} from 'typeorm';
 
 export class InitialSetup1505070972792 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<any> {
-    await queryRunner.createTable(new TableSchema(
-      'black_card',
-      [
+    await queryRunner.createTable(
+      new TableSchema('black_card', [
         new ColumnSchema({
           name: 'id',
           type: 'integer',
@@ -43,12 +50,11 @@ export class InitialSetup1505070972792 implements MigrationInterface {
           type: 'integer',
           isNullable: true
         })
-      ]
-    ));
+      ])
+    );
 
-    await queryRunner.createTable(new TableSchema(
-      'white_card',
-      [
+    await queryRunner.createTable(
+      new TableSchema('white_card', [
         new ColumnSchema({
           name: 'id',
           type: 'integer',
@@ -75,12 +81,11 @@ export class InitialSetup1505070972792 implements MigrationInterface {
           type: 'integer',
           isNullable: true
         })
-      ]
-    ));
+      ])
+    );
 
-    await queryRunner.createTable(new TableSchema(
-      'card_set',
-      [
+    await queryRunner.createTable(
+      new TableSchema('card_set', [
         new ColumnSchema({
           name: 'id',
           type: 'integer',
@@ -120,8 +125,8 @@ export class InitialSetup1505070972792 implements MigrationInterface {
           default: 0,
           isNullable: false
         })
-      ]
-    ));
+      ])
+    );
 
     await queryRunner.createForeignKey(
       'black_card',

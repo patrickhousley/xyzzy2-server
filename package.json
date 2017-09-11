@@ -62,7 +62,8 @@
       "src/**/*.{js,ts}",
       "!src/test-lib/**/*.{js,ts}",
       "!**/*.interface.ts",
-      "!**/*.module.ts"
+      "!**/*.module.ts",
+      "!src/migrations/**/*.ts"
     ],
     "coverageReporters": [
       "lcov"

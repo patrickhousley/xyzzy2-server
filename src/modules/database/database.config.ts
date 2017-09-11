@@ -3,5 +3,5 @@ import { ConnectionOptions } from 'typeorm';
 
 @Component()
 export abstract class DatabaseConfig {
-    abstract getConfiguration(): ConnectionOptions;
+  public abstract getConfiguration(): ConnectionOptions;
 }

@@ -7,7 +7,7 @@ import * as bodyParser from 'body-parser';
 import * as compression from 'compression';
 import * as express from 'express';
 import * as helmet from 'helmet';
-import { ApplicationModule } from './app/app.module';
+import { ApplicationModule } from './modules/application/app.module';
 
 const expressInstance = express();
 expressInstance.use(helmet());

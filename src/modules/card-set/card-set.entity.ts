@@ -1,11 +1,6 @@
-import { WhiteCard } from '../white-card/white-card.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { BlackCard } from '../black-card/black-card.entity';
-import {
-  Column,
-  Entity,
-  OneToMany,
-  PrimaryGeneratedColumn
-  } from 'typeorm';
+import { WhiteCard } from '../white-card/white-card.entity';
 
 @Entity()
 export class CardSet {

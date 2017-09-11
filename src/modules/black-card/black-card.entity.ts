@@ -1,10 +1,5 @@
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { CardSet } from '../card-set/card-set.entity';
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn
-  } from 'typeorm';
 
 @Entity()
 export class BlackCard {

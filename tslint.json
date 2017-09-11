@@ -42,6 +42,7 @@
         2
       ]
     },
+    "interface-name": [true, "never-prefix"],
     "jsdoc-format": false,
     "linebreak-style": {
       "options": [
