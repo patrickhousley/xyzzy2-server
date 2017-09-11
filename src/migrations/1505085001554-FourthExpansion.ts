@@ -8,7 +8,7 @@ export class FourthExpansion1505085001554 implements MigrationInterface {
       name: `The Fourth Expansion`,
       baseDeck: true,
       description: `The official Fourth Expansion.`,
-      weight: 12,
+      weight: 13,
       active: true
     });
 
@@ -1042,7 +1042,7 @@ export class FourthExpansion1505085001554 implements MigrationInterface {
       name: `The Fourth Expansion`,
       baseDeck: true,
       description: `The official Fourth Expansion.`,
-      weight: 12,
+      weight: 13,
       active: true
     });
   }
