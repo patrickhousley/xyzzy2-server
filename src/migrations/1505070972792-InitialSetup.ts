@@ -1,4 +1,4 @@
-/* tslint:disable:no-non-null-assertion no-unsafe-any no-any */
+/* tslint:disable:no-non-null-assertion no-unsafe-any no-any no-unnecessary-type-assertion */
 
 import {
   ColumnSchema,

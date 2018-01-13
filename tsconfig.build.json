@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true
+  },
+  "exclude": [
+    "dist",
+    "e2e",
+    "node_modules",
+    "private.ts"
+  ]
+}
