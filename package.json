@@ -50,9 +50,9 @@
     "typescript": "^2.6.2"
   },
   "lint-staged": {
-    "src/**/*.ts": [
-      "prettier --single-quote --write",
-      "tslint --type-check --project tsconfig.json",
+    "{src,e2e}/**/*.ts": [
+      "prettier --parser typescript --single-quote --write",
+      "tslint -p tsconfig.json -c tslint.json",
       "jest --findRelatedTests",
       "git add"
     ]
